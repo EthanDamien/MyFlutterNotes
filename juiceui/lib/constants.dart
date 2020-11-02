@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xFF9ba4b4);
+const kPrimaryColor = Color(0xFF394867);
 const kTextColor = Color(0xFF14274e);
 const kBackgroundColor = Color(0xFFf1f6f9);
 //https://colorhunt.co/palette/212984

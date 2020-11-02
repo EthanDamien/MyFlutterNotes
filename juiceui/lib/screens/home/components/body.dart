@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:juiceui/constants.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
+import 'package:juiceui/screens/home/components/headerwithsearchbox.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -8,54 +11,82 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
-        Container(
-          //cover 20% of the height
-          height: size.height * 0.2,
-          child: Stack(
-            children: <Widget>[
-              Container(
-                height: size.height * 0.2 - 27,
-                decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(36),
-                    bottomRight: Radius.circular(36),
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: Container(
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                  padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                  height: 54,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 30,
-                          color: kPrimaryColor.withOpacity(0.23)),
-                    ],
-                  ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search",
-                      hintStyle: TextStyle(color: kPrimaryColor),
-                      enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
-        ),
+        HeaderwithSearchBox(size: size),
+        TitlewithBtn(text: "Recommended Topics")
       ],
+    );
+  }
+}
+
+class TitlewithBtn extends StatelessWidget {
+  const TitlewithBtn({
+    Key key,
+    this.text,
+    this.pressBtn,
+  }) : super(key: key);
+
+  final String text;
+  final Function pressBtn;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding:
+          const EdgeInsets.only(right: kDefaultPadding, left: kDefaultPadding),
+      child: Row(
+        children: <Widget>[
+          TitleWithUnderline(text: text),
+          //Spaces before overflow
+          Spacer(),
+          FlatButton(
+            onPressed: () {},
+            child: Text("More",
+                style: TextStyle(color: Colors.white, fontFamily: "Juiceness")),
+            color: kPrimaryColor,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class TitleWithUnderline extends StatelessWidget {
+  const TitleWithUnderline({
+    Key key,
+    this.text,
+  }) : super(key: key);
+
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 24,
+      child: Stack(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(0),
+            child: Text(
+              text,
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: "Juiceness"),
+            ),
+          ),
+          Positioned(
+            bottom: 5,
+            left: 0,
+            right: 0,
+            child: Container(
+              margin: EdgeInsets.all(0),
+              height: 7,
+              color: kPrimaryColor.withOpacity(0.2),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
