@@ -30,8 +30,8 @@ class HeaderwithSearchBox extends StatelessWidget {
             decoration: BoxDecoration(
               color: kPrimaryColor,
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(36),
-                bottomRight: Radius.circular(36),
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
             ),
             child: Row(
@@ -66,7 +66,7 @@ class HeaderwithSearchBox extends StatelessWidget {
               decoration: BoxDecoration(
                 //Searchbar color
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(40),
                 boxShadow: [
                   //searchbar hovering effect
                   BoxShadow(
