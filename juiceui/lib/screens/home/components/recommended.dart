@@ -13,43 +13,46 @@ class Recommended_Topics extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          TopicCard(
-            size: size,
-            topic: 'Classification of Matter',
-            course: "Chemistry",
-            state: "10/29/20",
-            stateId: bad,
-            press: () {},
-          ),
-          TopicCard(
-            size: size,
-            topic: 'Mole Concepts',
-            course: "Chemistry",
-            state: "10/27/20",
-            stateId: iffy,
-            press: () {},
-          ),
-          TopicCard(
-            size: size,
-            topic: 'Stock Analysis',
-            course: "Statistics",
-            state: "10/10/20",
-            stateId: good,
-            press: () {},
-          ),
-          TopicCard(
-            size: size,
-            topic: 'VSEPR theory',
-            course: "Chemistry",
-            state: "10/27/20",
-            stateId: good,
-            press: () {},
-          ),
-        ],
+    return Container(
+      margin: EdgeInsets.only(bottom: kDefaultPadding),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            TopicCard(
+              size: size,
+              topic: 'Classification of Matter',
+              course: "Chemistry",
+              state: "10/29/20",
+              stateId: bad,
+              press: () {},
+            ),
+            TopicCard(
+              size: size,
+              topic: 'Mole Concepts',
+              course: "Chemistry",
+              state: "10/27/20",
+              stateId: iffy,
+              press: () {},
+            ),
+            TopicCard(
+              size: size,
+              topic: 'Stock Analysis',
+              course: "Statistics",
+              state: "10/10/20",
+              stateId: good,
+              press: () {},
+            ),
+            TopicCard(
+              size: size,
+              topic: 'VSEPR theory',
+              course: "Chemistry",
+              state: "10/27/20",
+              stateId: good,
+              press: () {},
+            ),
+          ],
+        ),
       ),
     );
   }

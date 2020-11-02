@@ -13,5 +13,6 @@ const kBackgroundColor = Color(0xFFf1f6f9);
 const good = Colors.green;
 const iffy = Colors.orange;
 const bad = Colors.red;
+const neutral = Colors.grey;
 //https://colorhunt.co/palette/212984
 const double kDefaultPadding = 20.0;

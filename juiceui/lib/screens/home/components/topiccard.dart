@@ -24,9 +24,10 @@ class TopicCard extends StatelessWidget {
       onTap: press,
       child: Container(
         margin: EdgeInsets.only(
-            left: kDefaultPadding,
-            top: kDefaultPadding / 2,
-            bottom: kDefaultPadding * 2.5),
+          left: kDefaultPadding,
+          top: kDefaultPadding / 2,
+          bottom: kDefaultPadding,
+        ),
         padding: EdgeInsets.all(kDefaultPadding / 2),
         width: size.width * 0.4,
         height: size.width * 0.4,
@@ -34,11 +35,11 @@ class TopicCard extends StatelessWidget {
           color: kPrimaryColor,
           borderRadius: BorderRadius.all(Radius.circular(10)),
           boxShadow: [
-            //searchbar hovering effect
+            //Glow Effect
             BoxShadow(
-                offset: Offset(0, 0),
+                offset: Offset(0, 5),
                 blurRadius: 10,
-                color: kPrimaryColor.withOpacity(0.23)),
+                color: kPrimaryColor.withOpacity(1)),
           ],
         ),
         child: Column(
