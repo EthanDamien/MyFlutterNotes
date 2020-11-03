@@ -2,27 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:juiceui/constants.dart';
-import 'package:juiceui/screens/home/components/body.dart';
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(),
-      body: Body(),
-      bottomNavigationBar: BottomNavBar(),
-    );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-        elevation: 0,
-        leading: IconButton(
-          icon: SvgPicture.asset("assets/icons/menu.svg"),
-          onPressed: () {},
-        ));
-  }
-}
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({

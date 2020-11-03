@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Juice UI test',
       theme: ThemeData(
+        canvasColor: Colors.transparent,
         scaffoldBackgroundColor: kBackgroundColor,
         primaryColor: kPrimaryColor,
         fontFamily: "Juiceness",
