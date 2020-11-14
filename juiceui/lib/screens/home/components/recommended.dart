@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:juiceui/constants.dart';
+import 'package:juiceui/screens/details/details_screen.dart';
 import 'package:juiceui/screens/home/components/topiccard.dart';
 
 class Recommended_Topics extends StatelessWidget {
@@ -25,7 +26,14 @@ class Recommended_Topics extends StatelessWidget {
               course: "Chemistry",
               state: "10/29/20",
               stateId: bad,
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsScreen(),
+                  ),
+                );
+              },
             ),
             TopicCard(
               size: size,
@@ -33,7 +41,14 @@ class Recommended_Topics extends StatelessWidget {
               course: "Chemistry",
               state: "10/27/20",
               stateId: iffy,
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsScreen(),
+                  ),
+                );
+              },
             ),
             TopicCard(
               size: size,
